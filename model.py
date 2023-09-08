@@ -55,11 +55,11 @@ class Critic(nn.Module):
             nn.Linear(128, 1)
         )
 
-    def forward(self, state, prev_action):
+    def forward(self, state, action):
         """
         Forward pass through the network.
         """
-        x = torch.cat([state, prev_action], dim = -1)
+        x = torch.cat([state, action], dim = -1)
         return self.network(x)
     
     

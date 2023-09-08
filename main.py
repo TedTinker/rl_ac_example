@@ -108,8 +108,8 @@ def run_episode(render = False, episode_num = 0):
     total_reward = 0
 
     while not done:
-        if render: pass  
-            #env.render()
+        #if render:   
+        #    env.render()
         
         t += 1
         action = select_action(state)
